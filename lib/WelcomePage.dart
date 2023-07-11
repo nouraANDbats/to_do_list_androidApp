@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:animate_gradient/animate_gradient.dart';
 
 RadialGradient r1 = RadialGradient(
   colors: [
@@ -21,47 +20,27 @@ RadialGradient r2 = RadialGradient(
   focal: Alignment.topRight,
 );
 
-class WelcomePage extends StatefulWidget {
+class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
 
-  @override
-  State<WelcomePage> createState() => _WelcomePageState();
-}
-
-class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: AnimateGradient(
-          primaryBegin: Alignment.topLeft,
-          primaryEnd: Alignment.bottomRight,
-          secondaryBegin: Alignment.bottomRight,
-          secondaryEnd: Alignment.topRight,
-          primaryColors: const [
-            Colors.deepOrangeAccent,
-            Color(0xFF6289FF),
-          ],
-          secondaryColors: [
-            Color(0xFF6289FF),
-            Colors.deepOrangeAccent,
-          ],
-          child: Row(
-            children: [
-              Expanded(
-                flex: 15,
-                child: Text(
-                  'To-Dos',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white70),
-                ),
-              ),
-            ],
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image:
+                AssetImage('assets/backroundImage/mesh-gradient.png'),
+                fit: BoxFit.cover),
+          ),
+          child: Center(
+            child: Text("To-dos", style: TextStyle(color: Colors.white,fontSize: 25),),
           ),
         ),
       ),
     );
   }
 }
+
+
