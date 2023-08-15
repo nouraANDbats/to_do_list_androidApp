@@ -30,17 +30,25 @@ class WelcomePage extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image:
-                AssetImage('assets/backroundImage/mesh-gradient.png'),
+                image: AssetImage('assets/backroundImage/mesh-gradient.png'),
                 fit: BoxFit.cover),
           ),
-          child: Center(
-            child: Text("To-dos", style: TextStyle(color: Colors.white,fontSize: 25),),
+          child: Row(
+            children: [
+              Center(
+                child: Container(
+                // decoration: BoxDecoration(
+                //   mainAxisAlignment:
+                // ),
+                    child: Text(
+                  "To-dos",
+                  style: TextStyle(color: Colors.white, fontSize: 25),
+                )),
+              ),
+            ],
           ),
         ),
       ),
     );
   }
 }
-
-
