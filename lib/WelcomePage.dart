@@ -36,14 +36,20 @@ class WelcomePage extends StatelessWidget {
           child: Row(
             children: [
               Center(
-                child: Container(
-                // decoration: BoxDecoration(
-                //   mainAxisAlignment:
-                // ),
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                  child: Container(
+                      // decoration: BoxDecoration(
+                      //   mainAxisAlignment:
+                      // ),
+                      child: Align(
+                    alignment: Alignment.topLeft,
                     child: Text(
-                  "To-dos",
-                  style: TextStyle(color: Colors.white, fontSize: 25),
-                )),
+                      "To-dos",
+                      style: TextStyle(color: Colors.white, fontSize: 45),
+                    ),
+                  )),
+                ),
               ),
             ],
           ),
