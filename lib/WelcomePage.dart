@@ -31,13 +31,17 @@ class WelcomePage extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/backroundImage/mesh-gradient.png'),
-                fit: BoxFit.cover),
+                fit: BoxFit.fill),
           ),
           child: Row(
+            mainAxisAlignment:MainAxisAlignment.start,
+
             children: [
+
+
               Center(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                  padding: EdgeInsets.fromLTRB(20, 80, 5, 5),
                   child: Container(
                       // decoration: BoxDecoration(
                       //   mainAxisAlignment:
@@ -46,9 +50,30 @@ class WelcomePage extends StatelessWidget {
                     alignment: Alignment.topLeft,
                     child: Text(
                       "To-dos",
-                      style: TextStyle(color: Colors.white, fontSize: 45),
+                      style: TextStyle(color: Colors.white, fontSize: 38, fontWeight: FontWeight.bold),
                     ),
                   )),
+                ),
+              ),
+
+              Center(
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(0, 80, 0, 25),
+                  child: Container(
+
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Help you '
+                                'keep track of your goals',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 24.41,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                      )),
                 ),
               ),
             ],
