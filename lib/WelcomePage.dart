@@ -33,15 +33,16 @@ class WelcomePage extends StatelessWidget {
                 image: AssetImage('assets/backroundImage/mesh-gradient.png'),
                 fit: BoxFit.fill),
           ),
-          child: Row(
+          child:Column(
             mainAxisAlignment:MainAxisAlignment.start,
+            //crossAxisAlignment: CrossAxisAlignment.start,
 
             children: [
 
 
               Center(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(20, 80, 5, 5),
+                  padding: EdgeInsets.fromLTRB(20, 60, 5, 5),
                   child: Container(
                       // decoration: BoxDecoration(
                       //   mainAxisAlignment:
@@ -58,22 +59,21 @@ class WelcomePage extends StatelessWidget {
 
               Center(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(0, 80, 0, 25),
-                  child: Container(
-
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                          child: Text(
-                            'Help you '
-                                'keep track of your goals',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 24.41,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                      )),
+                  padding: EdgeInsets.fromLTRB(23, 30, 0, 0),
+                  child: SizedBox(
+                    width: 400,
+                    height: 375,
+                    child: Text(
+                      'Keep Track Of Your Goals',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24.41,
+                        fontFamily: 'Inter',
+                        fontWeight: FontWeight.w700,
+                        height: 0,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ],
